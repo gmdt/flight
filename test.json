@@ -1,0 +1,22 @@
+[
+  {
+    "companyId": "63510a62a5c949dc303da4ac",
+    "description": "Welcome to the Economy cabin, where you'll enjoy a seat that combines elegance and comfort.",
+    "title": "Economy seat"
+  },
+  {
+    "companyId": "63510a62a5c949dc303da4ac",
+    "description": "Depending on the time of day, you'll be served a range of refreshments: a pastry in the morning, a fresh sandwich at mealtime and a light treat in the afternoon. A large choice of drinks are also available",
+    "title": "In-flight services"
+  },
+  {
+    "companyId": "63510a62a5c949dc303da4ac",
+    "description": "Travel comfortably in a seat located at the front of the aircraft.",
+    "title": "Business seat"
+  },
+  {
+    "companyId": "63510a62a5c949dc303da4ac",
+    "description": "Download your favorite newspapers and magazines free of charge, starting 30 hours before your flight.",
+    "title": "Air France Play app"
+  }
+]
