@@ -1,0 +1,222 @@
+<mat-paginator
+  #paginator
+  [pageSizeOptions]="pageSizeOptions"
+  showFirstLastButtons
+>
+</mat-paginator>
+<div class="mat-elevation-z18" id="flights">
+  <table
+    mat-table
+    matTableExporter
+    [dataSource]="flights"
+    matSort
+    #exporter="matTableExporter"
+  >
+    <!-- idFlight -->
+    <ng-container matColumnDef="idFlight">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
+      <td mat-cell *matCellDef="let flight">{{ flight.idFlight }}</td>
+    </ng-container>
+    <!-- companyName -->
+    <ng-container matColumnDef="companyName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Company</th>
+      <td mat-cell *matCellDef="let flight">
+        {{
+          "searchFlightForm.company." + flight.companyName
+            | translate
+            | replaceNullValue
+        }}
+      </td>
+    </ng-container>
+    <!-- flightType -->
+    <ng-container matColumnDef="flightType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Flight type</th>
+      <td mat-cell *matCellDef="let flight">
+        {{
+          "searchFlightForm.flightType." + flight.flightType
+            | translate
+            | replaceNullValue
+        }}
+      </td>
+    </ng-container>
+    <!-- travelType -->
+    <ng-container matColumnDef="travelType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Travel type</th>
+      <td mat-cell *matCellDef="let flight">
+        {{
+          "searchFlightForm.tripType." + flight.travelType
+            | translate
+            | replaceNullValue
+        }}
+      </td>
+    </ng-container>
+    <!-- departureDate -->
+    <ng-container matColumnDef="departureDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Departure date</th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.departureDate | i18nDate | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- departureTime -->
+    <ng-container matColumnDef="departureTime">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Departure time</th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.departureTime | i18nDate | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- arrivalDate -->
+    <ng-container matColumnDef="arrivalDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Arrival date</th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.arrivalDate | i18nDate | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- arrivalTime -->
+    <ng-container matColumnDef="arrivalTime">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Arrival time</th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.arrivalTime | i18nDate | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- backDate -->
+    <ng-container matColumnDef="backDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Back date</th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.backDate | i18nDate | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- backTime -->
+    <ng-container matColumnDef="backTime">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Back time</th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.backTime | i18nDate | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- departureLocation -->
+    <ng-container matColumnDef="departureLocation">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        Departure location
+      </th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.departureLocation | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- arrivalLocation -->
+    <ng-container matColumnDef="arrivalLocation">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        Arrival location
+      </th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.arrivalLocation | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- flightDuration -->
+    <ng-container matColumnDef="flightDuration">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Flight duration</th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.flightDuration | i18nDate | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- connectionDuration -->
+    <ng-container matColumnDef="connectionDuration">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        Connection duration
+      </th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.connectionDuration | i18nDate | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- aircraftType -->
+    <ng-container matColumnDef="aircraftType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Aircraft type</th>
+      <td mat-cell *matCellDef="let flight">
+        {{ flight.aircraftType | replaceNullValue }}
+      </td>
+    </ng-container>
+    <!-- select -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        {{ "flightsList.detail.label" | translate }}
+      </th>
+      <td mat-cell *matCellDef="let flight">
+        <div id="details">
+          <a>
+            <mat-icon (click)="getFlight(flight.idFlight)">assignment</mat-icon>
+          </a>
+          <mat-checkbox
+            (change)="$event ? addRow(flight) : null"
+          ></mat-checkbox>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
+<div id="mainBanner">
+  <h3>{{ "flightsList.listManag.label" | translate }}</h3>
+</div>
+
+<div id="buttonListBar">
+  <p class="firstLeft">
+    <button
+      mat-raised-button
+      (click)="exporter.exportTable('xlsx', { fileName: 'Flights list' })"
+    >
+      <mat-icon>insert_drive_file</mat-icon
+      >{{ "flightsList.export.label" | translate }}
+    </button>
+  </p>
+
+  <p
+    class="firstRight"
+    [ngStyle]="{ display: !displayBackButton ? 'inherit' : 'none' }"
+  >
+    <button mat-raised-button (click)="getSelectedFlights()">
+      <mat-icon>select_all</mat-icon
+      >{{ "flightsList.select.label" | translate }}
+    </button>
+  </p>
+  <p
+    class="firstRight"
+    [ngStyle]="{ display: displayBackButton ? 'inherit' : 'none' }"
+  >
+    <button mat-raised-button (click)="backToResultList()">
+      <mat-icon>fast_rewind</mat-icon
+      >{{ "flightsList.backList.label" | translate }}
+    </button>
+  </p>
+
+  <p class="nextRight">
+    <button mat-raised-button (click)="openDialogWithRef(bookmark)">
+      <mat-icon>bookmark</mat-icon
+      >{{ "flightsList.bookmark.label" | translate }}
+    </button>
+  </p>
+</div>
+
+<ng-template #bookmark>
+  <h2 matDialogTitle>{{ "flightsList.addBook.label" | translate }}</h2>
+  <mat-form-field hintLabel="3 to 50 characters">
+    <input
+      matInput
+      #input
+      minlength="3"
+      maxlength="50"
+      [(ngModel)]="title"
+      id="bookmarkTitle"
+      type="text"
+      placeholder="{{ 'flightsList.book.title' | translate }}"
+    />
+    <mat-hint align="end">{{ input?.value?.length || 0 }}/50</mat-hint>
+  </mat-form-field>
+  <mat-dialog-actions>
+    <button mat-button matDialogClose (click)="addBookmark()">
+      {{ "flightsList.addBook.button" | translate }}
+    </button>
+    <button mat-button matDialogClose>
+      {{ "flightsList.cancel.button" | translate }}
+    </button>
+  </mat-dialog-actions>
+</ng-template>

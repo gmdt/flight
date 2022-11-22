@@ -1,0 +1,105 @@
+{
+  "searchFlightForm": {
+    "header.label": "Search flights",
+    "companyName.label": "Company",
+    "tripType.label": "Trip",
+    "flight.label": "Flight type",
+    "aircraft.label": "Aircraft type",
+    "departingFrom.label": "Departing from",
+    "arrivingAt.label": "Arriving at ",
+    "deparDateMin.label": "Departing date min",
+    "deparDateMax.label": "Departing date max",
+    "deparTimeMin.label": "Departing time min",
+    "deparTimeMax.label": "Departing time max",
+    "arrivDateMin.label": "Arriving date min",
+    "arrivDateMax.label": "Arriving date max",
+    "arrivTimeMin.label": "Arriving time min",
+    "arrivTimeMax.label": "Arriving time max",
+    "backDateMin.label": "Back date min",
+    "backDateMax.label": "Back date max",
+    "backTimeMin.label": "Back time min",
+    "backTimeMax.label": "Back time max",
+    "flightDurMin.label": "Flight duration min",
+    "flightDurMax.label": "Flight duration max",
+    "connectDurMin.label": "Connection duration min",
+    "connectDurMax.label": "Connection duration max",
+    "farMin.label": "Fare min",
+    "farMax.label": "Fare max",
+    "searchButton.label": "Find flight",
+    "cancelButton.label": "Cancel",
+    "company": {
+      "AIRFRANCE": "Air France",
+      "AIRARABIA": "Air Arabia",
+      "EMIRATES": "Emirates",
+      "QATARAIRWAYS": "Qatar Airways",
+      "AIRMALI": "Air Mali"
+    },
+    "tripType": {
+      "ONEWAYTICKET": "One-Way ticket",
+      "ROUNDTRIP": "Round trip"
+    },
+    "flightType": {
+      "DIRECT": "Direct flight",
+      "CONNECTING": "Connecting flight"
+    }
+  },
+  "flightsList": {
+    "company.label": "Company",
+    "trip.label": "Trip",
+    "flight.label": "Flight type",
+    "departingFrom.label": "Departing location",
+    "arrivingAt.label": "Arriving location",
+    "deparDate.label": "Departure date",
+    "deparTime.label": "Departure time",
+    "arrivDate.label": "Arrival date",
+    "arrivTime.label": "Arrival time",
+    "backDate.label": "Back date",
+    "backTime.label": "Back time",
+    "detail.label": "Details",
+    "searchResult.label": "Search result",
+    "remontedResult.label": "Remonted result",
+    "nbFlights.label": "Flights number",
+    "listManag.label": "Flights List Management",
+    "export.label": "Export CSV",
+    "bookmark.label": "Add to Bookmarks",
+    "select.label": "Selected Flights",
+    "backList.label": "Back to the result list",
+    "flightNb.label": "Flight number",
+    "aircraft.label": "Aircraft type",
+    "connection.label": "Connection time",
+    "flightDuration.label": "Flight duration",
+    "addBook.label": "Add to Bookmarks",
+    "book.title": "Title",
+    "addBook.button": "Add",
+    "cancel.button": "Cancel",
+    "synthesisButton.label": "Synthesis"
+  },
+  "csvExport": {
+    "fileName": "Flights list"
+  },
+  "bookmarkList": {
+    "header": "Bookmarks list",
+    "title": "Title",
+    "addingDate": "adding date",
+    "nbFlights": "Number of flights",
+    "view": "View"
+  },
+  "synthesisPage": {
+    "synthesis.header": "Synthesis",
+    "flightSynthesis.header": "Flights synthesis",
+    "companiesSynthesis.header": "Companies synthesis",
+    "tripSynthesis.header": "Trip synthesis",
+    "nbFlights.label": "Number of flights"
+  },
+  "detailsPage": {
+    "action.header": "Actions",
+    "flight.header": "Flights information",
+    "cabin.header": "Cabin detail",
+    "inflight.header": "Inflight services",
+    "inflight.button": "View inflight services",
+    "inflightBack.button": "Back to the flight details",
+    "back.button": "Back to th result list",
+    "previous.button": "Previous",
+    "next.button": "Next"
+  }
+}

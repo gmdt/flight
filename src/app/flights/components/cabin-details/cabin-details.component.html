@@ -1,0 +1,19 @@
+<div id="mainBanner">
+  <h3>{{ "detailsPage.cabin.header" | translate }}</h3>
+</div>
+<div id="cabinDetails" class="table">
+  <tr>
+    <th *ngFor="let cabinDetail of cabinDetails">
+      {{ cabinDetail.cabinClass }}
+    </th>
+  </tr>
+  <tr>
+    <td *ngFor="let c of cabinDetails">
+      - {{ c.bagage }}<br /><br />
+      - {{ c.cancellation }}<br /><br />
+      - {{ c.rebooking }}<br /><br />
+      - {{ c.refund }}<br /><br />
+      - {{ c.fare }} $
+    </td>
+  </tr>
+</div>

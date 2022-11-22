@@ -1,0 +1,104 @@
+{
+  "searchFlightForm": {
+    "header.label": "Recherche de vols",
+    "companyName.label": "Compagnie",
+    "tripType.label": "Voyage",
+    "flight.label": "Type de vol",
+    "aircraft.label": "Type d'aéronef",
+    "departingFrom.label": "Depart de",
+    "arrivingAt.label": "Arrivée à",
+    "deparDateMin.label": "Date de départ min",
+    "deparDateMax.label": "Date de départ max",
+    "deparTimeMin.label": "Heure de départ min",
+    "deparTimeMax.label": "Heure de départ max",
+    "arrivDateMin.label": "Date d'arrivée min",
+    "arrivDateMax.label": "Date d'arrivée max",
+    "arrivTimeMin.label": "Heure d'arrivée min",
+    "arrivTimeMax.label": "Heure d'arrivée max",
+    "backDateMin.label": "Date de retour min",
+    "backDateMax.label": "Date de retour max",
+    "backTimeMin.label": "Heure de retour min",
+    "backTimeMax.label": "Heure de retour max",
+    "flightDurMin.label": "Durée de voyage min",
+    "flightDurMax.label": "Durée de voyage max",
+    "connectDurMin.label": "Durée de connexion min",
+    "connectDurMax.label": "Durée de connexion max",
+    "farMin.label": "Tarif min",
+    "farMax.label": "Tarif max",
+    "searchButton.label": "Rechercher un vol",
+    "cancelButton.label": "Annuler",
+    "company": {
+      "AIRFRANCE": "Air France",
+      "AIRARABIA": "Air Arabia",
+      "EMIRATES": "Emirates",
+      "QATARAIRWAYS": "Qatar Airways",
+      "AIRMALI": "Air Mali"
+    },
+    "tripType": {
+      "ONEWAYTICKET": "Aller simple",
+      "ROUNDTRIP": "Aller-retour"
+    },
+    "flightType": {
+      "DIRECT": "Vol direct",
+      "CONNECTING": "Vol avec correspondance"
+    }
+  },
+  "flightsList": {
+    "company.label": "Compagnie",
+    "trip.label": "Voyage",
+    "flight.label": "Type de vol",
+    "departingFrom.label": "Ville de départ",
+    "arrivingAt.label": "Ville d'arrivée",
+    "deparDate.label": "Date de départ",
+    "deparTime.label": "Heure de départ",
+    "arrivDate.label": "Date d'arrivée",
+    "arrivTime.label": "Heure d'arrivée",
+    "backDate.label": "Date de retour",
+    "backTime.label": "Heure de retour",
+    "detail.label": "Détails",
+    "searchResult.label": "Résultat de Recherche",
+    "remontedResult.label": "Résultat remonté",
+    "nbFlights.label": "Nombre de vols",
+    "listManag.label": "Flights Liste des Manageurs de vol",
+    "export.label": "Exporter CSV",
+    "bookmark.label": "Panier",
+    "select.label": "Vols selectionnés",
+    "backList.label": "Retour à la liste",
+    "aircraft.label": "Type d'aéronef",
+    "connection.label": "Correspondance",
+    "flightDuration.label": "Durée de correspondance",
+    "addBook.label": "Ajouter au panier",
+    "book.title": "Titre",
+    "addBook.button": "Ajouter",
+    "cancel.button": "Annuler",
+    "synthesisButton.label": "Synthèse"
+  },
+  "csvExport": {
+    "fileName": "Liste des vols"
+  },
+  "bookmarkList": {
+    "header": "Liste des favoris",
+    "title": "Titre",
+    "addingDate": "Date d'ajout",
+    "nbFlights": "Nombre de vols",
+    "view": "Afficher"
+  },
+  "synthesisPage": {
+    "synthesis.header": "Synthèse",
+    "flightSynthesis.header": "Synthèse de vols",
+    "companiesSynthesis.header": "Synthèse des compagnies",
+    "tripSynthesis.header": "Synthèse de voyage",
+    "nbFlights.label": "Nombre de vols"
+  },
+  "detailsPage": {
+    "action.header": "Actions",
+    "flight.header": "Informations sur les vols",
+    "cabin.header": "Détails Cabin",
+    "inflight.header": "Service en vol",
+    "inflight.button": "Afficher les services en vol",
+    "inflightBack.button": "Retour au détail du vol",
+    "back.button": "Retour à la liste des résultats",
+    "previous.button": "Précédent",
+    "next.button": "Suivant"
+  }
+}

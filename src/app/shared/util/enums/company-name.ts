@@ -1,0 +1,7 @@
+export enum CompanyName {
+  AIRFRANCE,
+  AIRARABIA,
+  EMIRATES,
+  QATARAIRWAYS,
+  AIRMALI,
+}
